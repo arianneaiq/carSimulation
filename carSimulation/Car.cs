@@ -6,42 +6,74 @@ namespace carSimulation
 {
     public class Car
     {
-        public string Brand;
-        public int CurrentSpeed;
-        public int MaximumSpeed;
+        private  string Brand;
+        private  int CurrentSpeed;
+        private int MaximumSpeed;
 
-       
-       /*( public Car(string brand, int currentSpeed, int maximumSpeed)        {
 
-            Brand = brand;
-            CurrentSpeed = currentSpeed;
-            MaximumSpeed = maximumSpeed;
-        }*/
-
-        public void SetBrand ( String brand)
+        public void SetBrand ( String aBrand)
         {
-            this.Brand = brand;
+           Brand = aBrand;
+        }  
+        
+        public void SetMaxSpeed(int maxSpeed)
+        {
+            MaximumSpeed = maxSpeed;
+        }
+
+        public void SetCurrentSpeed (int aCurrentSpeed)
+        {
+            CurrentSpeed = aCurrentSpeed;
         }
 
         public String AsAString()
         {
-            return this.Brand;
+            return $"Speed of my {Brand} is {CurrentSpeed} km/h and its maximum speed is {MaximumSpeed} km/h.";
         }
 
-        public void SetMaxSpeed(int maxSpeed)
+        public String AsAString1()
         {
-            this.MaximumSpeed = maxSpeed;
+            return "max";
         }
 
-            public void SpeedUp()
-            {
-                CurrentSpeed += 7;
-            }
+        public void SpeedUp()
+        {
 
-            public void SlowDown()
+            CurrentSpeed += 7;
+            /*  if (CurrentSpeed > 0)
+              {
+                  CurrentSpeed += 7;
+              } 
+              else if (CurrentSpeed == MaximumSpeed)
+              {
+                  CurrentSpeed = MaximumSpeed;
+              }
+              else
+              {
+                  CurrentSpeed = 0;
+              }
+             */
+
+        }
+
+        public void SlowDown()
+        {
+            CurrentSpeed -= 10;
+            /*
+            if (CurrentSpeed > 11 && CurrentSpeed <= MaximumSpeed)
             {
                 CurrentSpeed -= 10;
             }
+            else
+            {
+                CurrentSpeed = 0;
+            }
+            */
+
+
+        }
+
+        
        
     }
 }

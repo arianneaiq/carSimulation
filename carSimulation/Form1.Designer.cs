@@ -83,6 +83,7 @@
             this.btnBreaks.TabIndex = 3;
             this.btnBreaks.Text = "Use the breaks";
             this.btnBreaks.UseVisualStyleBackColor = true;
+            this.btnBreaks.Click += new System.EventHandler(this.btnBreaks_Click);
             // 
             // Form1
             // 

@@ -18,24 +18,28 @@ namespace carSimulation
 
         {
             InitializeComponent();
-           myCar = new Car();
+            myCar = new Car();
 
-           myCar.SetBrand("Ferrari");
-            myCar.SetMaxSpeed(100);
+            myCar.SetBrand("Ferrari");
 
-            // myCar.setMaxSpeed(240);
-            // lbInfo.Text = "Speed of my " + myCar.Brand+ " is " + myCar.CurrentSpeed +  " km/h and it's maximum speed is " + myCar.MaximumSpeed + " km/h" ;
-            //lbInfo.Text = ($"Speed of my  {myCar.Brand}  is  {myCar.CurrentSpeed}  km/h and it's maximum speed is  {myCar.MaximumSpeed}  km/h");
-            lbInfo.Text = ($"Speed of my  {myCar.AsAString()}  is  {myCar.CurrentSpeed}  km/h and it's maximum speed is  {Convert.ToString (myCar.SetMaxSpeed())}  km/h");
-               
-
-
+            myCar.SetMaxSpeed(240);
+           
+            lbInfo.Text = myCar.AsAString();
 
         }
 
         private void btnAccelerate_Click(object sender, EventArgs e)
         {
-            myCar.SpeedUp();
+             myCar.SpeedUp();
+             lbInfo.Text = myCar.AsAString();
+
+        }
+
+        private void btnBreaks_Click(object sender, EventArgs e)
+        {
+            myCar.SlowDown();
+            lbInfo.Text = myCar.AsAString();
+
         }
     }
 }
