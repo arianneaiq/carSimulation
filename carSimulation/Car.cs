@@ -39,28 +39,28 @@ namespace carSimulation
         public void SpeedUp()
         {
 
-            CurrentSpeed += 7;
-            /*  if (CurrentSpeed > 0)
+            //CurrentSpeed += 7;
+              if (this.CurrentSpeed >= 0)
               {
-                  CurrentSpeed += 7;
+                  this.CurrentSpeed += 7;
               } 
-              else if (CurrentSpeed == MaximumSpeed)
+              else if (this.CurrentSpeed == this.MaximumSpeed)
               {
-                  CurrentSpeed = MaximumSpeed;
+                  this.CurrentSpeed = this.MaximumSpeed;
               }
               else
               {
-                  CurrentSpeed = 0;
+                  this.CurrentSpeed = 0;
               }
-             */
+             
 
         }
 
         public void SlowDown()
         {
-            CurrentSpeed -= 10;
-            /*
-            if (CurrentSpeed > 11 && CurrentSpeed <= MaximumSpeed)
+            //CurrentSpeed -= 10;
+            
+            if (CurrentSpeed >= 11 && CurrentSpeed <= MaximumSpeed)
             {
                 CurrentSpeed -= 10;
             }
@@ -68,7 +68,7 @@ namespace carSimulation
             {
                 CurrentSpeed = 0;
             }
-            */
+            
 
 
         }
